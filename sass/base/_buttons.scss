@@ -1,0 +1,61 @@
+
+.top-button {
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px 8px rgb(150 163 188);
+  font-weight: 900;
+  position: fixed;
+  background-color: orange;
+  align-items: center;
+  right: 10%;
+  top: 75%;
+  cursor: pointer;
+  display: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  @include media-mobile {
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    right: 5%;
+    top: 75%;
+    z-index: 99;
+    width: 30px;
+    height: 30px;
+  }
+    &:hover {
+      background-color: $button-hover
+    }
+    
+  }
+
+.top-button:before {
+  content: " << ";
+  transform: rotate(90deg);
+
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0.1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.top-button {
+  animation: appear 1s;
+  transition: all 0.3s ease-in-out;
+
+}
+
+
+  .visible {
+    display: inline-flex;
+  }

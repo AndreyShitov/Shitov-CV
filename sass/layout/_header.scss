@@ -1,0 +1,131 @@
+header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0px;
+    background: #ededed;
+    z-index: 99;
+}
+
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-mobile {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    @include media-mobile {
+        justify-content: space-between;
+    }
+
+}
+
+.logo_image {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.header__CV-name {
+    color: $color-secondary-text;
+    font-weight: 500;
+    padding-left: 50px;
+    margin: 0;
+    text-shadow: 10px -5px 3px #808bd9, 
+    0px 0px 20px #4155f0, 
+    0px 3px 10px rgb(191 184 176);
+    @include media-mobile {
+        padding: 0;
+    }
+    
+}
+
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* font-size: 1.8rem; */
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.navigation__link {
+    margin-left: 10px;
+    :nth-first-child {
+        margin-left: 0;
+    }
+    display: inline-flex;
+    @include media-mobile {
+        /* width: 100%; */
+        /* height: 80px; */
+    }
+    
+    
+}
+
+.navigation__link:hover {
+    // text-decoration: underline;
+    // text-underline-offset: 15px;
+    // color: $color-link-hover;
+    transform: scale(1.1);
+    @extend %transition;
+
+}
+
+.navigation__reference {
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(78, 110, 149);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin: 20px 0px;
+    line-height: 15px;
+    font-size: 1.8rem;
+    position: relative;
+    font-family: 'Nunito';
+    padding: 10px;
+    border-radius: 50px;
+    @include media-mobile {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+  }
+  
+  .navigation__reference::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    margin-top: 10px;
+    border-radius: 50%;
+    content: "";
+    background-color: rgb(78, 110, 149, 0.5);
+    transition: width 0.5s ease-out;
+  }
+  
+  .navigation__reference:hover::after,
+  .navigation__reference:focus::after {
+    width: 100%;
+  }
+
+  .navigation-item-selected {
+    background-color: $color-background;
+
+  }
+
+//   .navigation-item-bordered {
+//     border: 1px solid $color-border;
+//   }

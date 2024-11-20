@@ -1,0 +1,121 @@
+.footer {
+    background: linear-gradient(180deg, #ffc284 10%, #ff8914);
+    padding-top: 30px;
+
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include media-mobile {
+        & > :first-child {
+            width: 50%; 
+        }
+        & > p {            
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.footer__references {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 30%;
+    margin: 0;
+    @include media-mobile {
+        max-width: 48%;
+
+    }
+
+
+}
+.footer__copyright {
+    font-size: 1.5rem;
+    @include media-mobile {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+
+@keyframes float {
+    
+    0% { 
+        transform: translate(0,  0px);
+    }
+    50%  { 
+        transform: translate(0, 5px); 
+    }
+    100%   { 
+        transform: translate(0, -0px); 
+    }    
+}
+
+.footer-github-reference {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: $color-footer-text;
+    background-image: url(/svg/github.svg);
+    animation: float 3s infinite;
+    background-repeat: no-repeat;
+    animation-delay: 1s;
+    @include media-mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+.footer__hh {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: $color-footer-text;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    animation: float 3s infinite;
+    animation-delay: 2s;
+    @include media-mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+.footer__vk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(3, 91, 192);
+    color: $color-footer-text;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    animation: float 3s infinite;
+    animation-delay: 3s;
+    @include media-mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+
+

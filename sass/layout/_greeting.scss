@@ -1,0 +1,62 @@
+.greeting {
+    padding: 100px;
+    background: antiquewhite;
+    @include media-mobile {
+        padding: 50px 0;
+    }
+}
+
+.greeting_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-mobile {
+        flex-direction: column-reverse;
+    }
+
+    /* gap: 250px; */
+}
+
+.greeting__e-mail:hover {
+    background: $button-hover;
+}
+
+
+
+.greeting__e-mail {
+    background: $button-color;
+    @extend %transition;
+    @extend %button-size;
+
+    @include media-mobile {
+        align-self: center;
+    }
+}
+
+
+
+.greeting__image {
+    border-radius: 100%;
+    width: 35%;
+    object-fit: cover;
+    @include media-mobile {
+        width: 50%;
+    }
+}
+.greeting__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 100px;
+
+
+
+    @include media-mobile {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+// .greeting__description {
+//     padding: 30px 0px;
+// }

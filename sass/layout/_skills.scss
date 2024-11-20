@@ -1,0 +1,109 @@
+.skills {
+    padding: 100px 0px;
+    @include media-mobile {
+        text-align: center;
+        padding: 50px 0px;
+    }
+
+}
+
+
+.skills__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-mobile {
+        flex-direction: column;
+    }
+
+
+
+}
+
+
+.skills__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-left: 100px;
+@include media-mobile {
+    padding: 0;
+    align-items: center;
+}
+
+
+}
+
+.skills__reference, .js__reference {
+    @extend %transition;
+    @extend %button-size;
+    background-color: $button-color;
+}
+
+.skills__description {
+    padding: 50px 0px;
+    @include media-mobile {
+        padding: 0;
+    }
+}
+
+.skills__reference:hover, .js__reference:hover {
+    background: $button-hover;
+
+}
+
+.skills__image {
+    border-radius: 100px;
+    width: 100%;
+    max-width: 35vw;
+
+}
+/* .navigation__refer-to-skills {
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+
+.js__reference {
+    margin-bottom: 50px;
+}
+
+.skills-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.skills-section__title, .skills-section__subtitle {
+    text-align: center;
+}
+
+.game {
+    text-align: center;
+
+}
+
+form {
+    margin: 50px 0px;
+}
+
+code {
+
+    display: inline-flex;
+    max-width: 800px;
+    margin-bottom: 50px;
+    text-align: start;
+
+}
+
+.skills__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    margin-left: 30px;
+}
+

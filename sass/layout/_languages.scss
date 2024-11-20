@@ -1,0 +1,48 @@
+.languages {
+    background: rgb(255 247 237);
+    padding: 100px 0px;
+}
+.languages__description {
+    display: flex;
+    justify-content: space-between;
+    @include media-mobile {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    flex-direction: colum
+    }
+}
+
+.languages__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.languages__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.languages__indication {
+    width: 34px;
+    height: 34px;
+    border-radius: 100px;
+}
+
+.pro {
+    background-color:$color-additional-pro;
+}
+
+
+
+.medium {
+    background-color: $color-additional-medium;
+}
+
+.beginner {
+    background-color: $color-additional-beginner;
+}

@@ -1,0 +1,135 @@
+.experience_wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    @include media-mobile {
+
+    }
+
+}
+.experience__description {
+    display: flex;
+    flex-direction: column;
+
+
+    
+}
+
+.experience__period {
+    @include media-mobile {
+        margin: 0;
+    }
+}
+
+.experience__period::after {
+    position: relative;
+    content: "";
+    display: block;
+    width: 34px;
+    height: 10px;
+    background-color: $color-brand;
+    top: 20px;
+    @include media-mobile {
+        width: 80%;
+        height: 3px;
+        top: 0;
+
+    }
+}
+
+.experience__job {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 70px;
+    margin-bottom: 50px;
+    @include media-mobile {
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 1fr 3fr;
+        display: grid;
+        margin-bottom: 50px;
+        column-gap: 0px; 
+        margin-bottom: 50px;
+    }
+}
+
+
+.duty {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items:center;
+    padding: 10px;
+}
+/* 
+.duty::before {
+    background-image: url(/svg/arrow-left.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    content: "";
+    display: block;
+    width: 34px;
+    height: 20px;
+    top: 0;
+    left:0;
+} */
+
+
+
+.experience__position {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    @include media-mobile {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+    }
+
+}
+
+.experience__company {
+    grid-column: 1;
+    grid-row: 2;
+    font: bold;
+    @include media-mobile {
+        grid-column: 2;
+        grid-row: 1;
+        padding-top: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.experience__arrow {
+    background-image: url(/svg/arrow-left.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+
+}
+
+.experience__responsibility {
+    margin: 0;
+    width: 100%;
+}
+
+.experience__duties {
+    /* font-size: 2rem; */
+    list-style: none;
+    padding: 0;
+    /* height: 45vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    @include media-mobile {
+        grid-row: 3;
+        grid-column: 1 / -1;
+        height: 200px;
+        overflow: scroll;
+    }
+}
+.experience__job>.experience__period, .experience__position {
+    // margin: 0;
+}

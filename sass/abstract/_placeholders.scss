@@ -1,0 +1,21 @@
+%transition {
+    transition: all .4s ease-in-out;
+};
+
+
+%shadow {
+    box-shadow: 2px 2px orange;
+};
+
+
+%button-size {
+    width: max-content;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align:center;
+};
+
+%opacity-transition {
+    transition: opacity .7s ease-in-out;
+}
